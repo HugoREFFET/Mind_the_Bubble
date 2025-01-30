@@ -23,7 +23,7 @@ public class MoneyMultiplierButton : InterractableObject
         }
         else
         {
-            player.textBox.NewText("Not enough money");
+            player.textBox.NewText("Pas assez d'argent !");
         }
     }
     void Start()
@@ -35,6 +35,6 @@ public class MoneyMultiplierButton : InterractableObject
     void Update()
     {
         multiplierText.SetText("X " + Math.Round(player.moneyMultiplier,1).ToString());
-        costText.SetText("Cost: " + Math.Round(cost).ToString());
+        costText.SetText("Coût: " + Math.Round(cost).ToString());
     }
 }

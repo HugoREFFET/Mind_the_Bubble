@@ -26,13 +26,13 @@ public class Player : MonoBehaviour
 
     public void ChangeCollection()
     {
-        if (collectionIndex == (library.collections.Count))
+        if (collectionIndex >= (library.collections.Count-1))
         {
             library.Renew();
         }
         collectionIndex += 1;
         collection = library.collections[collectionIndex-1];
-        textBox.NewText("New collection unlocked !");
+        textBox.NewText("Nouvelle collection débloquée !");
         if (collection.index > maxIndex)
         {
             maxIndex = collection.index;

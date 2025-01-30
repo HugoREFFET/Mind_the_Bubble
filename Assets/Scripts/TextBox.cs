@@ -16,18 +16,18 @@ public class TextBox : MonoBehaviour
             state = "Idle";
             stayedFor += Time.deltaTime;
         }        
-        if (stayedFor >= 4)
+        if (stayedFor >= 1)
         {
             state = "GoingDown";
         }
         
         if (state == "GoingUp")
         {
-            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y + (150f*Time.deltaTime));
+            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y + (500f*Time.deltaTime));
         }
         else if (state == "GoingDown")
         {
-            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y - (100f*Time.deltaTime));
+            rect.anchoredPosition = new Vector2(rect.anchoredPosition.x, rect.anchoredPosition.y - (300f*Time.deltaTime));
         }
         else if (rect.anchoredPosition.y <= -100f)
         {

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 8918505224531287718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 554.49994, y: 238.33186, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47,6 +47,7 @@ MonoBehaviour:
   name: 
   value: 0
   comicsCollection:
-  - {fileID: 1003115325073596411, guid: 489e946598dd59148ad5df7e0ff67299, type: 3}
-  - {fileID: 1003115325073596411, guid: daf3bfba8fb231e4996e25cd0b22e361, type: 3}
-  - {fileID: 1003115325073596411, guid: 0314a3e18e619fe4983b6e1fb2e4bb78, type: 3}
+  - {fileID: 1003115325073596411, guid: 3d13ec98999571d43a05ff4537c97273, type: 3}
+  - {fileID: 1003115325073596411, guid: 994193a77f1235047a780b8968117f03, type: 3}
+  - {fileID: 1003115325073596411, guid: d83fb8eabfd58b74987007f24e447216, type: 3}
+  index: 2

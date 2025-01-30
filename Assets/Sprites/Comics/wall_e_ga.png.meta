@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 525e32d506d927941b54422e1d248acb
+guid: d2238aa67aca9684f9c061927efac550
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8024613707274904010
-    second: Bulle_2-4_0
+      213: 7913495410022208262
+    second: wall_e_ga_0
   - first:
-      213: -94826542446585470
-    second: Bulle_2-4_1
+      213: -701450948989960696
+    second: wall_e_ga_1
+  - first:
+      213: -6177254922870659923
+    second: wall_e_ga_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bulle_2-4_0
+      name: wall_e_ga_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 183
-        width: 1018
-        height: 582
+        x: 59
+        y: 53
+        width: 670
+        height: 363
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63e16267958d2a090800000000000000
-      internalID: -8024613707274904010
+      spriteID: 603de0ed52262dd60800000000000000
+      internalID: 7913495410022208262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bulle_2-4_1
+      name: wall_e_ga_1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 728
-        width: 154
-        height: 120
+        x: 804
+        y: 52
+        width: 670
+        height: 368
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 289513613cb1faef0800000000000000
-      internalID: -94826542446585470
+      spriteID: 80eb71e0412f346f0800000000000000
+      internalID: -701450948989960696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall_e_ga_2
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 51
+        width: 633
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4e24b406bf54aa0800000000000000
+      internalID: -6177254922870659923
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bulle_2-4_0: -8024613707274904010
-      Bulle_2-4_1: -94826542446585470
+      wall_e_ga_0: 7913495410022208262
+      wall_e_ga_1: -701450948989960696
+      wall_e_ga_2: -6177254922870659923
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

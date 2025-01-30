@@ -42,12 +42,12 @@ public class Worker : InterractableObject
             player.WinMoney(player.collection.value*speed*Time.deltaTime);
             
             valueText.SetText(Math.Round(player.collection.value*speed*player.moneyMultiplier,2).ToString()+ " /s");
-            costText.SetText(Math.Round(upgradeCost).ToString() + " to upgrade");
+            costText.SetText(Math.Round(upgradeCost).ToString() + " pour augmenter");
         }
         else
         {
-            valueText.SetText("Availble for "+ workshop.addWorkerCost);
-            costText.SetText("Cost : " + Math.Round(workshop.addWorkerCost));
+            valueText.SetText("Disponible pour "+ workshop.addWorkerCost);
+            costText.SetText("Coût : " + Math.Round(workshop.addWorkerCost));
         }
 
         
@@ -64,7 +64,7 @@ public class Worker : InterractableObject
         }
         else
         {
-            player.textBox.NewText("Not enough money");
+            player.textBox.NewText("Pas assez d'argent");
         }
     }
 

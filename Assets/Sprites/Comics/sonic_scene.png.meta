@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 525e32d506d927941b54422e1d248acb
+guid: baba0fcae9f583046a2d0e38c3563df1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8024613707274904010
-    second: Bulle_2-4_0
+      213: 9203790015016449942
+    second: sonic_scene_0
   - first:
-      213: -94826542446585470
-    second: Bulle_2-4_1
+      213: 2483015564455737229
+    second: sonic_scene_1
+  - first:
+      213: 6503183011144367150
+    second: sonic_scene_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bulle_2-4_0
+      name: sonic_scene_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 183
-        width: 1018
-        height: 582
+        x: 8
+        y: 31
+        width: 792
+        height: 407
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63e16267958d2a090800000000000000
-      internalID: -8024613707274904010
+      spriteID: 697b750414e6abf70800000000000000
+      internalID: 9203790015016449942
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bulle_2-4_1
+      name: sonic_scene_1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 728
-        width: 154
-        height: 120
+        x: 853
+        y: 30
+        width: 797
+        height: 408
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 289513613cb1faef0800000000000000
-      internalID: -94826542446585470
+      spriteID: d8776231081757220800000000000000
+      internalID: 2483015564455737229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sonic_scene_2
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 31
+        width: 531
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c7d984e72ff3a50800000000000000
+      internalID: 6503183011144367150
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bulle_2-4_0: -8024613707274904010
-      Bulle_2-4_1: -94826542446585470
+      sonic_scene_0: 9203790015016449942
+      sonic_scene_1: 2483015564455737229
+      sonic_scene_2: 6503183011144367150
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

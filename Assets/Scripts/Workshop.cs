@@ -34,16 +34,16 @@ public class Workshop : MonoBehaviour
                 player.LoseMoney(addWorkerCost);
                 workersCount++;
                 addWorkerCost = addWorkerCost * addWorkerScale;
-                player.textBox.NewText("Now worker hired !");
+                player.textBox.NewText("Nouvel employé embauché!");
             }
             else
             {
-                player.textBox.NewText("Workshop capacity is not enough to add workers");
+                player.textBox.NewText("Capacité de l'atelier augmentée");
             }
         }
         else
         {
-            player.textBox.NewText("Not enough money");
+            player.textBox.NewText("Pas assez d'argent");
         }
 
         return workergood;
@@ -64,16 +64,16 @@ public class Workshop : MonoBehaviour
                 {
                     workers[i].GameObject().SetActive(true);
                 }
-                player.textBox.NewText("Workshop capacity upgraded !");
+                player.textBox.NewText("Capacité de l'atelier augmentée");
             }
             else
             {
-                player.textBox.NewText("Not enough money");
+                player.textBox.NewText("Pas assez d'argent !");
             }
         }
         else
         {
-            player.textBox.NewText("Max capacity reached");
+            player.textBox.NewText("Pas assez d'argent !");
         }
 
     }
@@ -86,11 +86,11 @@ public class Workshop : MonoBehaviour
     {
         if (maxWorkers >= 5)
         {
-            upgradeCostText.SetText("Max reached");
+            upgradeCostText.SetText("Maximum");
         }
         else
         {
-            upgradeCostText.SetText("Cost: " + upgradeCapacityCost.ToString());
+            upgradeCostText.SetText("Coût: " + upgradeCapacityCost.ToString());
         }
         
     }

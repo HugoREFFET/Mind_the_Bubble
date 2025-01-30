@@ -28,15 +28,15 @@ public class UpgradeCollectionButton : MonoBehaviour
 
     void Update()
     {
-        collectionNumberText.SetText("Collection N."+player.collection.index.ToString());
+        collectionNumberText.SetText("Collection N."+player.collection.index.ToString() + " : " + Math.Round(player.collection.value).ToString() + " $" );
         if (player.collection.index >= player.maxIndex)
         {
-            goNextText.SetText("Cost : " + Math.Round(cost).ToString());
+            goNextText.SetText("Coût : " + Math.Round(cost).ToString());
             buyable = true;
         }
         else
         {
-            goNextText.SetText("Go Next");
+            goNextText.SetText("Suivant");
             buyable = false;
         }
         
@@ -46,14 +46,14 @@ public class UpgradeCollectionButton : MonoBehaviour
         }
         else
         {
-            goPreviousText.SetText("Go Previous");
+            goPreviousText.SetText("Précedent");
         }
     }
     public void GoPreviousCollection()
     {
         if (player.collection.index == 1)
         {
-                player.textBox.NewText("No previous collection");
+                player.textBox.NewText("Pas de collection précedente");
         }
         else
         {
@@ -75,7 +75,7 @@ public class UpgradeCollectionButton : MonoBehaviour
             }
             else
             {
-                player.textBox.NewText("Not enough money");
+                player.textBox.NewText("Pas assez d'argent !");
             } 
         }
         else
