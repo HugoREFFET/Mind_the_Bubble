@@ -3,7 +3,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-public class Worker : MonoBehaviour
+using Unity.VisualScripting;
+
+public class Worker : InterractableObject
 {
     
     public float speed=0.1f;
@@ -15,9 +17,12 @@ public class Worker : MonoBehaviour
     public Workshop workshop;
     public TextMeshProUGUI inputValueText;
     public TextMeshProUGUI inputCostText;
+    public Image tableColor;
+    public Image bubbleImage;
+    public TextMeshProUGUI bubbleText;
+    public Image upgradeImage;
     
     private bool active = false;
-    private float progress;
     private Button button;
     private TextMeshProUGUI texte;
     private Text valueText;
@@ -33,19 +38,15 @@ public class Worker : MonoBehaviour
     void Update()
     {
         if (active)
-        { 
-            progress += (Time.deltaTime*speed);
-            while (progress >= 1)
-            {
-                progress -= 1;
-                player.WinMoney(player.collection.value);
-            } 
-            valueText.SetText(Math.Round(player.collection.value*player.moneyMultiplier*speed,2).ToString()+ " /s");
+        {
+            player.WinMoney(player.collection.value*speed*Time.deltaTime);
+            
+            valueText.SetText(Math.Round(player.collection.value*speed*player.moneyMultiplier,2).ToString()+ " /s");
             costText.SetText(Math.Round(upgradeCost).ToString() + " to upgrade");
         }
         else
         {
-            valueText.SetText("");
+            valueText.SetText("Availble for "+ workshop.addWorkerCost);
             costText.SetText("Cost : " + Math.Round(workshop.addWorkerCost));
         }
 
@@ -54,32 +55,38 @@ public class Worker : MonoBehaviour
 
     public void Upgrade()
     {
-        
+
         if (player.money >= upgradeCost)
         {
-            player.money -= upgradeCost;
+            player.LoseMoney(upgradeCost);
             speed = speed * upgradeSpeedScale;
             upgradeCost = upgradeCost * upgradeCostScale;
         }
         else
         {
-            Debug.Log("Not enough money");
+            player.textBox.NewText("Not enough money");
         }
     }
-    public void OnActivated()
+
+    public void Clicked()
     {
-        if (workshop.addWorker())
+        if (active)
         {
-                    Debug.Log(active);
-                    button=GetComponent<Button>();
-                    button.onClick.RemoveAllListeners();
-                    button.onClick.AddListener(Upgrade);
-                    childTransform = transform.GetChild(0); 
-                    GameObject child = childTransform.gameObject;
-                    texte=child.GetComponent<TextMeshProUGUI>();
-                    texte.text = name;
-                    active = true;
-                    Debug.Log(active);
+            Upgrade();
         }
+        else
+        {
+            if (workshop.addWorker())
+            {
+                tableColor.color=Color.white;
+                active = true;
+                images.Add(bubbleImage);
+                images.Add(upgradeImage);
+                texts.Add(bubbleText);
+                onHovered();
+                
+            }
+        }
+        
     }
 }

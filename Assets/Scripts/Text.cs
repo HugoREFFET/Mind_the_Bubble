@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 
 
-public class Text : MonoBehaviour
+public class Text
 {
     public TextMeshProUGUI dynaText;
 

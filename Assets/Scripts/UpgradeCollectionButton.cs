@@ -1,41 +1,87 @@
 using TMPro;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
+
 public class UpgradeCollectionButton : MonoBehaviour
 {
     public float cost=15;
     public float costScale=1.5f;
     public Player player;
     public TextMeshProUGUI inputCollectionNumberText;
-    public TextMeshProUGUI inputCostText;
+    public TextMeshProUGUI inputGoNextText;
+    public TextMeshProUGUI inputGoPreviousText;
     
+    private bool buyable=false;
     private Text collectionNumberText;
-    private Text costText;
+    private Text goNextText;
+    private Text goPreviousText;
     
-    public void Activate()
-    {
-        if (player.money > cost)
-        { 
-            player.money -= cost;
-            player.ChangeCollection();
-            cost = cost * costScale;
-            Debug.Log("Collection changed");
-        }
-        else
-        {
-            Debug.Log("Not enough money");
-        }
-    }
+
 
     void Start()
     {
         collectionNumberText = new Text() { dynaText = inputCollectionNumberText };
-        costText = new Text() { dynaText = inputCostText };
+        goNextText = new Text() { dynaText = inputGoNextText };
+        goPreviousText = new Text() { dynaText = inputGoPreviousText };
     }
 
     void Update()
     {
-        collectionNumberText.SetText("Collection N."+player.collectionIndex.ToString());
-        costText.SetText("Cost: " + Math.Round(cost).ToString());
+        collectionNumberText.SetText("Collection N."+player.collection.index.ToString());
+        if (player.collection.index >= player.maxIndex)
+        {
+            goNextText.SetText("Cost : " + Math.Round(cost).ToString());
+            buyable = true;
+        }
+        else
+        {
+            goNextText.SetText("Go Next");
+            buyable = false;
+        }
+        
+        if (player.collection.index == 1)
+        {
+            goPreviousText.SetText("/");
+        }
+        else
+        {
+            goPreviousText.SetText("Go Previous");
+        }
+    }
+    public void GoPreviousCollection()
+    {
+        if (player.collection.index == 1)
+        {
+                player.textBox.NewText("No previous collection");
+        }
+        else
+        {
+            player.collection = player.library.collections[player.collection.index -2];
+            player.drawingTable.ChangeDrawing();
+        }
+    }
+
+    public void GoNextCollection()
+    {
+        if (buyable)
+        {
+            if (player.money > cost)
+            { 
+                player.LoseMoney(cost);
+                player.ChangeCollection();
+                cost = cost * costScale;
+                player.drawingTable.ChangeDrawing();
+            }
+            else
+            {
+                player.textBox.NewText("Not enough money");
+            } 
+        }
+        else
+        {
+            player.collection = player.library.collections[player.collection.index];
+            player.drawingTable.ChangeDrawing();
+        }
     }
 }

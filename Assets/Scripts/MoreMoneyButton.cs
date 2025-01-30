@@ -6,7 +6,7 @@ public class MoreMoneyButton : MonoBehaviour
 {
     public Player player;
     public TextMeshProUGUI inputMoneyAmount;
-    public TMP_InputField blablaInputField;
+    public DrawingTable table;
     private Text moneyAmountText;
     
 
@@ -16,21 +16,23 @@ public class MoreMoneyButton : MonoBehaviour
     }
     public void Activate()
     {
-        if (blablaInputField.text != "")
+        Comic comicComponent = table.drawing.GetComponent<Comic>();
+        if (comicComponent.Filled())
         {
             player.WinMoney(player.collection.value);
-            blablaInputField.text = "";
+            comicComponent.Erase();
+            player.drawingTable.ChangeDrawing();
         }
         else
         {
-            Debug.Log("Type something");
+            player.textBox.NewText("Fill the bubbles to sell your comic");
         }
         
     }
 
-    private void Update()
+    void Update()
     {
-        moneyAmountText.dynaText.SetText("Current Money: " + Math.Round(player.money).ToString());
+        moneyAmountText.dynaText.SetText( Math.Round(player.money).ToString() + "$");
     }
 }
 

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 using System;
-public class MoneyMultiplierButton : MonoBehaviour
+public class MoneyMultiplierButton : InterractableObject
 {
     public float cost = 10;
     public float costScale = 1.8f;
@@ -17,13 +17,13 @@ public class MoneyMultiplierButton : MonoBehaviour
     {
         if (cost <= player.money)
         {
-            player.money -= cost;
+            player.LoseMoney(cost);
             player.moneyMultiplier = player.moneyMultiplier * upgradeScale;
             cost = cost * costScale;
         }
         else
         {
-            Debug.Log("Not enough money");  
+            player.textBox.NewText("Not enough money");
         }
     }
     void Start()

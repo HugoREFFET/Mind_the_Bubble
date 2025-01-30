@@ -1,7 +1,10 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using System;
 
 public class Workshop : MonoBehaviour
 {
@@ -9,37 +12,38 @@ public class Workshop : MonoBehaviour
     public float maxWorkers = 1;
     public float addWorkerCost = 100;
     public float addWorkerScale = 2;
-    public float upgradeCapacityCost = 200;
+    public float upgradeCapacityCost = 1000;
     public float upgradeCapacityScale = 2;
     public Player player;
-    public TextMeshProUGUI inputWorkshopStateText;
     public TextMeshProUGUI inputUpgradeCostText;
     public int workersCount = 0;
+    public Worker[] workers;
     
     private bool workergood;
     private Text workshopStateText;
     private Text upgradeCostText;
     public bool addWorker()
     {
+       
         workergood = player.money >= addWorkerCost;
-        if (player.money >= addWorkerCost)
+        if (workergood)
         {
             workergood = workersCount < maxWorkers;
             if (workergood)
             {
-                player.money -= addWorkerCost;
+                player.LoseMoney(addWorkerCost);
                 workersCount++;
                 addWorkerCost = addWorkerCost * addWorkerScale;
-
+                player.textBox.NewText("Now worker hired !");
             }
             else
             {
-                Debug.Log("Place insuffisante");
+                player.textBox.NewText("Workshop capacity is not enough to add workers");
             }
         }
         else
         {
-            Debug.Log("Not enough money");
+            player.textBox.NewText("Not enough money");
         }
 
         return workergood;
@@ -47,29 +51,47 @@ public class Workshop : MonoBehaviour
 
     public void upgradeCapacity()
     {
-        if (player.money >= upgradeCapacityCost)
+        if (maxWorkers < 5)
         {
-            maxWorkers=maxWorkers*upgradeCapacityScale;
-            player.money -= upgradeCapacityCost;
-            upgradeCapacityCost = upgradeCapacityCost * upgradeCapacityScale;
+            if (player.money >= upgradeCapacityCost)
+            {
+                maxWorkers=maxWorkers+2;
+                player.LoseMoney(upgradeCapacityCost);
+                upgradeCapacityCost = upgradeCapacityCost * upgradeCapacityScale;
+                int x = Mathf.RoundToInt(maxWorkers); 
+
+                for (int i = 0; i < x; i++)
+                {
+                    workers[i].GameObject().SetActive(true);
+                }
+                player.textBox.NewText("Workshop capacity upgraded !");
+            }
+            else
+            {
+                player.textBox.NewText("Not enough money");
+            }
         }
         else
         {
-            Debug.Log("Not enough money");
+            player.textBox.NewText("Max capacity reached");
         }
 
     }
 
     void Start()
     {
-        workshopStateText = new Text() { dynaText = inputWorkshopStateText };
         upgradeCostText = new Text() { dynaText = inputUpgradeCostText };
-
-        
     }
     void Update()
     {
-        workshopStateText.SetText(workersCount.ToString() + "/" + maxWorkers.ToString() + " Employees");
-        upgradeCostText.SetText("Cost: " + upgradeCapacityCost.ToString());
+        if (maxWorkers >= 5)
+        {
+            upgradeCostText.SetText("Max reached");
+        }
+        else
+        {
+            upgradeCostText.SetText("Cost: " + upgradeCapacityCost.ToString());
+        }
+        
     }
 }
