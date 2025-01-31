@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 525e32d506d927941b54422e1d248acb
+guid: 06218ba0890889347920d5faf3c51ac3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8024613707274904010
-    second: Bulle_2-4_0
+      213: 940905651856225330
+    second: madagascar_cases_0
   - first:
-      213: -94826542446585470
-    second: Bulle_2-4_1
+      213: -7470176466136241214
+    second: madagascar_cases_1
+  - first:
+      213: -7054629512789082304
+    second: madagascar_cases_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bulle_2-4_0
+      name: madagascar_cases_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 183
-        width: 1018
-        height: 582
+        x: 17
+        y: 27
+        width: 654
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63e16267958d2a090800000000000000
-      internalID: -8024613707274904010
+      spriteID: 2343c0a84b4ce0d00800000000000000
+      internalID: 940905651856225330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bulle_2-4_1
+      name: madagascar_cases_1
       rect:
         serializedVersion: 2
-        x: 239
-        y: 728
-        width: 154
-        height: 120
+        x: 752
+        y: 31
+        width: 654
+        height: 401
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +143,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 289513613cb1faef0800000000000000
-      internalID: -94826542446585470
+      spriteID: 2cb677e251a945890800000000000000
+      internalID: -7470176466136241214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: madagascar_cases_2
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 29
+        width: 671
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f383cc5dbe81e90800000000000000
+      internalID: -7054629512789082304
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bulle_2-4_0: -8024613707274904010
-      Bulle_2-4_1: -94826542446585470
+      madagascar_cases_0: 940905651856225330
+      madagascar_cases_1: -7470176466136241214
+      madagascar_cases_2: -7054629512789082304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

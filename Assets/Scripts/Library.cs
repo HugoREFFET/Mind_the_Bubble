@@ -11,7 +11,7 @@ public class Library : MonoBehaviour
     [SerializeField]
     public List<Collection> collections;
 
-    private int currentIndex = 3;
+    private int currentIndex = 4;
     void Start()
     {
         player.collection = collections[0];

@@ -4,7 +4,7 @@ public class DrawingTable : MonoBehaviour
 {
     public Player player;
     public GameObject drawing;
-    private int index = 0;
+    private int index = 1;
     private GameObject destroyable;
     private RectTransform rect;
     public void ChangeDrawing()
