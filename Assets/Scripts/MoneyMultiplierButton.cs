@@ -6,7 +6,6 @@ public class MoneyMultiplierButton : InterractableObject
     public float cost = 10;
     public float costScale = 1.8f;
     public float upgradeScale = 1.1f;
-    public Player player;
     public TextMeshProUGUI inputMultiplierText;
     public TextMeshProUGUI inputCostText;
     
@@ -17,12 +16,14 @@ public class MoneyMultiplierButton : InterractableObject
     {
         if (cost <= player.money)
         {
+            PlaySound();
             player.LoseMoney(cost);
             player.moneyMultiplier = player.moneyMultiplier * upgradeScale;
             cost = cost * costScale;
         }
         else
         {
+            player.PlayNoSound();
             player.textBox.NewText("Pas assez d'argent !");
         }
     }

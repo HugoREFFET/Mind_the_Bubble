@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
@@ -35,15 +34,18 @@ public class Workshop : MonoBehaviour
                 workersCount++;
                 addWorkerCost = addWorkerCost * addWorkerScale;
                 player.textBox.NewText("Nouvel employé embauché!");
+                player.PlayYaySound();
             }
             else
             {
-                player.textBox.NewText("Capacité de l'atelier augmentée");
+                player.textBox.NewText("Capacité de l'atelier insuffisante");
+                player.PlayNoSound();
             }
         }
         else
         {
             player.textBox.NewText("Pas assez d'argent");
+            player.PlayNoSound();
         }
 
         return workergood;
@@ -65,15 +67,18 @@ public class Workshop : MonoBehaviour
                     workers[i].GameObject().SetActive(true);
                 }
                 player.textBox.NewText("Capacité de l'atelier augmentée");
+                player.PlayYaySound();
             }
             else
             {
+                player.PlayNoSound();
                 player.textBox.NewText("Pas assez d'argent !");
             }
         }
         else
         {
-            player.textBox.NewText("Pas assez d'argent !");
+            player.textBox.NewText("Capcité maximale atteinte ");
+            player.PlayNoSound();
         }
 
     }
