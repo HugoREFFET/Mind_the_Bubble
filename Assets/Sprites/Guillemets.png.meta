@@ -209,7 +209,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Guillemets_0: -6986055950546705338
+      Guillemets_1: -4163901422701495214
+      Guillemets_2: 7760939900101455890
+      Guillemets_3: -2745115203211384337
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
