@@ -28,7 +28,7 @@ public class UpgradeCollectionButton : MonoBehaviour
 
     void Update()
     {
-        collectionNumberText.SetText("Collection N."+player.collection.index.ToString() + " : " + Math.Round(player.collection.value).ToString() + " $" );
+        collectionNumberText.SetText("Collection N."+player.collection.index.ToString() + " : " + Math.Round(player.collection.value).ToString() + " $ par comic" );
         if (player.collection.index >= player.maxIndex)
         {
             goNextText.SetText("Coût : " + Math.Round(cost).ToString());
@@ -53,10 +53,12 @@ public class UpgradeCollectionButton : MonoBehaviour
     {
         if (player.collection.index == 1)
         {
-                player.textBox.NewText("Pas de collection précedente");
+            player.PlayNoSound();
+            player.textBox.NewText("Pas de collection précedente");
         }
         else
         {
+            player.PlayClickSound();
             player.collection = player.library.collections[player.collection.index -2];
             player.drawingTable.ChangeDrawing();
         }
@@ -68,6 +70,7 @@ public class UpgradeCollectionButton : MonoBehaviour
         {
             if (player.money > cost)
             { 
+                player.PlayYaySound();
                 player.LoseMoney(cost);
                 player.ChangeCollection();
                 cost = cost * costScale;
@@ -75,11 +78,13 @@ public class UpgradeCollectionButton : MonoBehaviour
             }
             else
             {
+                player.PlayNoSound();
                 player.textBox.NewText("Pas assez d'argent !");
             } 
         }
         else
         {
+            player.PlayClickSound();
             player.collection = player.library.collections[player.collection.index];
             player.drawingTable.ChangeDrawing();
         }

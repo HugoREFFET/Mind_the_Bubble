@@ -13,7 +13,6 @@ public class Worker : InterractableObject
     public float upgradeCost = 100;
     public float upgradeCostScale = 1.5f;
     public float upgradeSpeedScale = 1.2f;
-    public Player player;
     public Workshop workshop;
     public TextMeshProUGUI inputValueText;
     public TextMeshProUGUI inputCostText;
@@ -21,6 +20,7 @@ public class Worker : InterractableObject
     public Image bubbleImage;
     public TextMeshProUGUI bubbleText;
     public Image upgradeImage;
+    
     
     private bool active = false;
     private Button button;
@@ -61,10 +61,12 @@ public class Worker : InterractableObject
             player.LoseMoney(upgradeCost);
             speed = speed * upgradeSpeedScale;
             upgradeCost = upgradeCost * upgradeCostScale;
+            PlaySound();
         }
         else
         {
             player.textBox.NewText("Pas assez d'argent");
+            player.PlayNoSound();
         }
     }
 
@@ -72,12 +74,15 @@ public class Worker : InterractableObject
     {
         if (active)
         {
+            player.PlayClickSound();
             Upgrade();
         }
         else
         {
+            
             if (workshop.addWorker())
             {
+                valueText.dynaText.fontSize = 22;
                 tableColor.color=Color.white;
                 active = true;
                 images.Add(bubbleImage);

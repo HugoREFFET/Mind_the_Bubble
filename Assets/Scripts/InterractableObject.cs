@@ -7,6 +7,7 @@ public class InterractableObject : MonoBehaviour
 {
     public List<Image> images;
     public List<TextMeshProUGUI> texts;
+    public Player player;
 
     public void onHovered()
     {
@@ -23,5 +24,10 @@ public class InterractableObject : MonoBehaviour
         foreach (TextMeshProUGUI text in texts)
             text.enabled = false;
         
+    }
+
+    public void PlaySound()
+    {
+        player.PlayClickSound();
     }
 }

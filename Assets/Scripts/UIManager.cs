@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public CanvasGroup[] canvas;
@@ -17,4 +17,23 @@ public class UIManager : MonoBehaviour
         canvas[canvasNumber].interactable = true;
         canvas[canvasNumber].blocksRaycasts = true;
     }
+
+    public void SwitchScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MenuScene");
+        }
+    }
+
 }
