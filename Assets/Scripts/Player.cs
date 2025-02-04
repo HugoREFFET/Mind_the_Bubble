@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         }
         collectionIndex += 1;
         collection = library.collections[collectionIndex-1];
-        textBox.NewText("Nouvelle collection débloquée !");
+        textBox.NewText("New Collection Unlocked !");
         if (collection.index > maxIndex)
         {
             maxIndex = collection.index;

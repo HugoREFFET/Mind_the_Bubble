@@ -26,7 +26,7 @@ public class MoreMoneyButton : MonoBehaviour
         }
         else
         {
-            player.textBox.NewText("Remplis les bulles pour pouvoir vendre ton comics ");
+            player.textBox.NewText("Fill in the bubbles to sell your comic ");
             player.PlayNoSound();
         }
         
