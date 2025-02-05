@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -97,5 +98,10 @@ public class PersonalizedComic : MonoBehaviour
             comics_Collection_Window.SetActive(false);
             button_text.text = "Open collection";
         }
+    }
+
+    public void ScreenShot()
+    {
+        ScreenCapture.CaptureScreenshot("screenshot-" + DateTime.Now.ToString("yyyy-MM-dd-HH-ss") + ".png");
     }
 }
