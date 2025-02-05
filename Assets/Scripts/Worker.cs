@@ -1,13 +1,12 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using System;
-using Unity.VisualScripting;
 
 public class Worker : InterractableObject
 {
-    
     public float speed=0.1f;
     public string name;
     public float upgradeCost = 100;
@@ -21,14 +20,13 @@ public class Worker : InterractableObject
     public TextMeshProUGUI bubbleText;
     public Image upgradeImage;
     
-    
-    private bool active = false;
+    private bool active, selected;
     private Button button;
     private TextMeshProUGUI texte;
     private Text valueText;
     private Text costText;
     private Transform childTransform;
-
+    
     public void Start()
     {
         valueText = new Text { dynaText = inputValueText };
@@ -50,12 +48,11 @@ public class Worker : InterractableObject
             costText.SetText("Cost : " + Math.Round(workshop.addWorkerCost));
         }
 
-        
+        selected = IsSelected;
     }
 
     public void Upgrade()
     {
-
         if (player.money >= upgradeCost)
         {
             player.LoseMoney(upgradeCost);
@@ -70,6 +67,36 @@ public class Worker : InterractableObject
         }
     }
 
+    private bool IsSelected => EventSystem.current.currentSelectedGameObject == gameObject;
+    public void Selected()
+    {
+        if (selected)
+        {
+            if (!active && workshop.addWorker())
+            {
+                valueText.dynaText.fontSize = 22;
+                tableColor.color = Color.white;
+                active = true;
+                images.Add(bubbleImage);
+                images.Add(upgradeImage);
+                texts.Add(bubbleText);
+            }
+            onHovered();
+            StartCoroutine(Deselect());
+        }
+        else
+        {
+            selected = true;
+        }
+    }
+
+    private IEnumerator Deselect()
+    {
+        yield return new WaitForSeconds(2f);
+        onUnhovered();
+        selected = false;
+    }
+
     public void Clicked()
     {
         if (active)
@@ -77,21 +104,5 @@ public class Worker : InterractableObject
             player.PlayClickSound();
             Upgrade();
         }
-        else
-        {
-            
-            if (workshop.addWorker())
-            {
-                valueText.dynaText.fontSize = 22;
-                tableColor.color=Color.white;
-                active = true;
-                images.Add(bubbleImage);
-                images.Add(upgradeImage);
-                texts.Add(bubbleText);
-                onHovered();
-                
-            }
-        }
-        
     }
 }

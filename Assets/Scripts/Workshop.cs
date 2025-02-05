@@ -57,7 +57,7 @@ public class Workshop : MonoBehaviour
         {
             if (player.money >= upgradeCapacityCost)
             {
-                maxWorkers=maxWorkers+2;
+                maxWorkers+=2;
                 player.LoseMoney(upgradeCapacityCost);
                 upgradeCapacityCost = upgradeCapacityCost * upgradeCapacityScale;
                 int x = Mathf.RoundToInt(maxWorkers); 

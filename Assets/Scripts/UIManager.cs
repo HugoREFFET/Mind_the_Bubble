@@ -1,9 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public CanvasGroup[] canvas;
-    
+
+    private void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
 
     public void SwitchCanvas(int canvasNumber)
     {
