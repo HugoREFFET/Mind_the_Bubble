@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70cb764bcd4000d4389d33dfff30015a
+guid: 322bf48aa46dc4341abc16a21fa4201c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1541297701127086768
-    second: PC 3_0
+      213: 5818918203930543480
+    second: Atelier_vide_long_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PC 3_0
+      name: Atelier_vide_long_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 700
-        height: 403
+        width: 3840
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05d913f28e53c9ae0800000000000000
-      internalID: -1541297701127086768
+      spriteID: 875855ac643f0c050800000000000000
+      internalID: 5818918203930543480
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      PC 3_0: -1541297701127086768
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

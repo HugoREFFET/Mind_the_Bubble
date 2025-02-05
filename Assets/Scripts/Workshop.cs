@@ -53,7 +53,7 @@ public class Workshop : MonoBehaviour
 
     public void upgradeCapacity()
     {
-        if (maxWorkers < 5)
+        if (maxWorkers < 11)
         {
             if (player.money >= upgradeCapacityCost)
             {
