@@ -1,17 +1,16 @@
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Library : MonoBehaviour
 {
     
     public float currentValue=1;
-    public float valueScale= 1.5f;
+    public float valueScale= 2f;
     public Player player;
     [SerializeField]
     public List<Collection> collections;
 
-    private int currentIndex = 4;
+    private int currentIndex = 9;
     void Start()
     {
         player.collection = collections[0];

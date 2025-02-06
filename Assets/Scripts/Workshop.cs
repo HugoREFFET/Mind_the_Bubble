@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System;
@@ -34,16 +33,19 @@ public class Workshop : MonoBehaviour
                 player.LoseMoney(addWorkerCost);
                 workersCount++;
                 addWorkerCost = addWorkerCost * addWorkerScale;
-                player.textBox.NewText("Nouvel employé embauché!");
+                player.textBox.NewText("New employee hired !");
+                player.PlayYaySound();
             }
             else
             {
-                player.textBox.NewText("Capacité de l'atelier augmentée");
+                player.textBox.NewText("Insufficient workshop capacity");
+                player.PlayNoSound();
             }
         }
         else
         {
-            player.textBox.NewText("Pas assez d'argent");
+            player.textBox.NewText("Not enough money !");
+            player.PlayNoSound();
         }
 
         return workergood;
@@ -51,29 +53,32 @@ public class Workshop : MonoBehaviour
 
     public void upgradeCapacity()
     {
-        if (maxWorkers < 5)
+        if (maxWorkers < 10)
         {
             if (player.money >= upgradeCapacityCost)
             {
-                maxWorkers=maxWorkers+2;
+                maxWorkers+=2;
                 player.LoseMoney(upgradeCapacityCost);
                 upgradeCapacityCost = upgradeCapacityCost * upgradeCapacityScale;
-                int x = Mathf.RoundToInt(maxWorkers); 
+                int x = Mathf.RoundToInt(maxWorkers) + 1; 
 
                 for (int i = 0; i < x; i++)
                 {
                     workers[i].GameObject().SetActive(true);
                 }
-                player.textBox.NewText("Capacité de l'atelier augmentée");
+                player.textBox.NewText("Increased workshop capacity");
+                player.PlayYaySound();
             }
             else
             {
-                player.textBox.NewText("Pas assez d'argent !");
+                player.PlayNoSound();
+                player.textBox.NewText("Not enough money !");
             }
         }
         else
         {
-            player.textBox.NewText("Pas assez d'argent !");
+            player.textBox.NewText("Maximum capacity reached");
+            player.PlayNoSound();
         }
 
     }
@@ -84,13 +89,13 @@ public class Workshop : MonoBehaviour
     }
     void Update()
     {
-        if (maxWorkers >= 5)
+        if (maxWorkers >= 10)
         {
             upgradeCostText.SetText("Maximum");
         }
         else
         {
-            upgradeCostText.SetText("Coût: " + upgradeCapacityCost.ToString());
+            upgradeCostText.SetText("Cost: " + upgradeCapacityCost.ToString());
         }
         
     }

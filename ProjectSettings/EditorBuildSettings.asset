@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/MenuScene.unity
+    guid: 67ea33ea5d9a98348af508c573e41cbc
+  - enabled: 1
+    path: Assets/Scenes/Mind_The_Bubble.unity
+    guid: 65a2c73171ae1e543b24fde43aac40d6
+  - enabled: 1
+    path: Assets/Scenes/Test_Raph.unity
+    guid: 96f70f785d6a7354c8d1e24abe448f73
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 3182f277708fa204bbcceb2663035cc9, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: fcfde53d88d07c4459fcdefe04cc5b99, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 8f2f7e673778877428d9e9e65e0a0df9, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

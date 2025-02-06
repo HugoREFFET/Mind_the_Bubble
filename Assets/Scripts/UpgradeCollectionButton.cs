@@ -28,15 +28,15 @@ public class UpgradeCollectionButton : MonoBehaviour
 
     void Update()
     {
-        collectionNumberText.SetText("Collection N."+player.collection.index.ToString() + " : " + Math.Round(player.collection.value).ToString() + " $" );
+        collectionNumberText.SetText("Collection N."+player.collection.index.ToString() + " : " + Math.Round(player.collection.value).ToString() + " $ by comic" );
         if (player.collection.index >= player.maxIndex)
         {
-            goNextText.SetText("Coût : " + Math.Round(cost).ToString());
+            goNextText.SetText("Cost : " + Math.Round(cost).ToString());
             buyable = true;
         }
         else
         {
-            goNextText.SetText("Suivant");
+            goNextText.SetText("Next");
             buyable = false;
         }
         
@@ -46,17 +46,19 @@ public class UpgradeCollectionButton : MonoBehaviour
         }
         else
         {
-            goPreviousText.SetText("Précedent");
+            goPreviousText.SetText("Previous");
         }
     }
     public void GoPreviousCollection()
     {
         if (player.collection.index == 1)
         {
-                player.textBox.NewText("Pas de collection précedente");
+            player.PlayNoSound();
+            player.textBox.NewText("No previous collection");
         }
         else
         {
+            player.PlayClickSound();
             player.collection = player.library.collections[player.collection.index -2];
             player.drawingTable.ChangeDrawing();
         }
@@ -68,6 +70,7 @@ public class UpgradeCollectionButton : MonoBehaviour
         {
             if (player.money > cost)
             { 
+                player.PlayYaySound();
                 player.LoseMoney(cost);
                 player.ChangeCollection();
                 cost = cost * costScale;
@@ -75,11 +78,13 @@ public class UpgradeCollectionButton : MonoBehaviour
             }
             else
             {
-                player.textBox.NewText("Pas assez d'argent !");
+                player.PlayNoSound();
+                player.textBox.NewText("Not enough money !");
             } 
         }
         else
         {
+            player.PlayClickSound();
             player.collection = player.library.collections[player.collection.index];
             player.drawingTable.ChangeDrawing();
         }
