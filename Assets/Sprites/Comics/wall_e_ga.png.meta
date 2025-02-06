@@ -78,12 +78,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall_e_ga_0
+      name: Atelier_vide_0
       rect:
         serializedVersion: 2
-        x: 59
-        y: 53
-        width: 670
-        height: 363
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 603de0ed52262dd60800000000000000
-      internalID: 7913495410022208262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_e_ga_1
-      rect:
-        serializedVersion: 2
-        x: 804
-        y: 52
-        width: 670
-        height: 368
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 80eb71e0412f346f0800000000000000
-      internalID: -701450948989960696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_e_ga_2
-      rect:
-        serializedVersion: 2
-        x: 1527
-        y: 51
-        width: 633
-        height: 367
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da4e24b406bf54aa0800000000000000
-      internalID: -6177254922870659923
+      spriteID: 19712401639b37670800000000000000
+      internalID: 8535369360649361297
       vertices: []
       indices: 
       edges: []
@@ -185,9 +141,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wall_e_ga_0: 7913495410022208262
-      wall_e_ga_1: -701450948989960696
-      wall_e_ga_2: -6177254922870659923
+      Atelier_vide_0: 8535369360649361297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

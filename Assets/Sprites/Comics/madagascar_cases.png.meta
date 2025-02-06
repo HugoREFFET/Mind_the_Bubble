@@ -78,12 +78,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: madagascar_cases_0
+      name: Atelier_vide_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 27
-        width: 654
-        height: 404
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2343c0a84b4ce0d00800000000000000
-      internalID: 940905651856225330
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: madagascar_cases_1
-      rect:
-        serializedVersion: 2
-        x: 752
-        y: 31
-        width: 654
-        height: 401
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2cb677e251a945890800000000000000
-      internalID: -7470176466136241214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: madagascar_cases_2
-      rect:
-        serializedVersion: 2
-        x: 1468
-        y: 29
-        width: 671
-        height: 401
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 04f383cc5dbe81e90800000000000000
-      internalID: -7054629512789082304
+      spriteID: 19712401639b37670800000000000000
+      internalID: 8535369360649361297
       vertices: []
       indices: 
       edges: []
@@ -185,9 +141,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      madagascar_cases_0: 940905651856225330
-      madagascar_cases_1: -7470176466136241214
-      madagascar_cases_2: -7054629512789082304
+      Atelier_vide_0: 8535369360649361297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

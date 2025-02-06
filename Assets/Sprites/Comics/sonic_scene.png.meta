@@ -78,12 +78,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sonic_scene_0
+      name: Atelier_vide_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 31
-        width: 792
-        height: 407
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 697b750414e6abf70800000000000000
-      internalID: 9203790015016449942
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sonic_scene_1
-      rect:
-        serializedVersion: 2
-        x: 853
-        y: 30
-        width: 797
-        height: 408
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d8776231081757220800000000000000
-      internalID: 2483015564455737229
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sonic_scene_2
-      rect:
-        serializedVersion: 2
-        x: 1704
-        y: 31
-        width: 531
-        height: 408
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e2c7d984e72ff3a50800000000000000
-      internalID: 6503183011144367150
+      spriteID: 19712401639b37670800000000000000
+      internalID: 8535369360649361297
       vertices: []
       indices: 
       edges: []
@@ -185,9 +141,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sonic_scene_0: 9203790015016449942
-      sonic_scene_1: 2483015564455737229
-      sonic_scene_2: 6503183011144367150
+      Atelier_vide_0: 8535369360649361297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

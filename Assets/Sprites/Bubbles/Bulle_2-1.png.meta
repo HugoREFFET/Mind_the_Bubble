@@ -75,12 +75,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bulle_2-1_0
+      name: Bulle_1-1_0
       rect:
         serializedVersion: 2
-        x: 38
-        y: 265
-        width: 1018
-        height: 582
+        x: 57
+        y: 199
+        width: 973
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,30 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 949b782d0195b55d0800000000000000
-      internalID: -3072764391963772599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bulle_2-1_1
-      rect:
-        serializedVersion: 2
-        x: 702
-        y: 182
-        width: 154
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 387394df5d615ef50800000000000000
-      internalID: 6909954311603173251
+      spriteID: 46f00d99a7a811c60800000000000000
+      internalID: 7787157489871490916
       vertices: []
       indices: 
       edges: []
@@ -160,8 +138,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bulle_2-1_0: -3072764391963772599
-      Bulle_2-1_1: 6909954311603173251
+      Bulle_1-1_0: 7787157489871490916
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

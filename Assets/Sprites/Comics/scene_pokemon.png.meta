@@ -78,12 +78,12 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: scene_pokemon_0
+      name: Atelier_vide_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 2
-        width: 467
-        height: 282
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,52 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2e82b39a0baddd20800000000000000
-      internalID: 3304985763475787308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: scene_pokemon_1
-      rect:
-        serializedVersion: 2
-        x: 493
-        y: 3
-        width: 467
-        height: 279
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8a1bae52f3d173710800000000000000
-      internalID: 1672837943647711656
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: scene_pokemon_2
-      rect:
-        serializedVersion: 2
-        x: 976
-        y: 5
-        width: 470
-        height: 277
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5ff50b26fcc8e9910800000000000000
-      internalID: 1846067719610327029
+      spriteID: 19712401639b37670800000000000000
+      internalID: 8535369360649361297
       vertices: []
       indices: 
       edges: []
@@ -185,9 +141,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      scene_pokemon_0: 3304985763475787308
-      scene_pokemon_1: 1672837943647711656
-      scene_pokemon_2: 1846067719610327029
+      Atelier_vide_0: 8535369360649361297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
