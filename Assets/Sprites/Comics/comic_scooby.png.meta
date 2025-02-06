@@ -157,6 +157,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -547,7 +560,24 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      comic_scooby_0: 7163407213198748605
+      comic_scooby_1: -1303622508062268168
+      comic_scooby_10: 4161579072706223394
+      comic_scooby_11: 7426391816645681535
+      comic_scooby_12: -728614707461507992
+      comic_scooby_13: -6924178374150205879
+      comic_scooby_14: -280779732673733550
+      comic_scooby_15: 1533531695011620102
+      comic_scooby_16: -2244642238325960298
+      comic_scooby_2: -4630036916983181761
+      comic_scooby_3: 8171473786963167410
+      comic_scooby_4: -8639314745694848620
+      comic_scooby_5: -2202903553821649731
+      comic_scooby_6: 3180163397761883908
+      comic_scooby_7: -5870144893197575344
+      comic_scooby_8: 7981644785288957611
+      comic_scooby_9: -8577564580506965325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

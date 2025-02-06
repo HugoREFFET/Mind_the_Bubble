@@ -223,6 +223,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1097,7 +1110,46 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      simpson_0: 4036910218124687226
+      simpson_1: -7501177496190896896
+      simpson_10: -7289190265972066723
+      simpson_11: 5779051756848232440
+      simpson_12: -8221820124810277601
+      simpson_13: 980094236171764346
+      simpson_14: -1944004797456261652
+      simpson_15: -7174075466115026213
+      simpson_16: -1043734426540267966
+      simpson_17: 500254311725308346
+      simpson_18: 3048792239341605319
+      simpson_19: 2944893347397657085
+      simpson_2: 6812620986302571980
+      simpson_20: 8400129853801318322
+      simpson_21: 743189187024882771
+      simpson_22: 1578484977110566239
+      simpson_23: 9109058656786770760
+      simpson_24: -3885466341352116310
+      simpson_25: 8613418632629989545
+      simpson_26: 7024779258545217860
+      simpson_27: 3079198539758622866
+      simpson_28: 6525251094457144787
+      simpson_29: 6343338013533157866
+      simpson_3: 7650979841476589565
+      simpson_30: -3044278628549089438
+      simpson_31: 8607553429308699861
+      simpson_32: 3540259477273626310
+      simpson_33: -1468880821127611543
+      simpson_34: 4613000219848512039
+      simpson_35: -8340688164744001135
+      simpson_36: 7461674455559243585
+      simpson_37: -1272095781312524723
+      simpson_38: -2757459326583233576
+      simpson_4: 9115349021349010714
+      simpson_5: 6375717320649381521
+      simpson_6: 5837562995131531849
+      simpson_7: -7127457865823973339
+      simpson_8: -2442013097366270973
+      simpson_9: 2946541837142308686
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

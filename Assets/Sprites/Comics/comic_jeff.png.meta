@@ -130,6 +130,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -322,7 +335,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      comic_jeff_0: 5387469122104667381
+      comic_jeff_1: -8578374194943459165
+      comic_jeff_2: 3596881153258177146
+      comic_jeff_3: 8062269211795149150
+      comic_jeff_4: 4152486135680877567
+      comic_jeff_5: -3362414345937583478
+      comic_jeff_6: 2837018624879342746
+      comic_jeff_7: 591208870504766839
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

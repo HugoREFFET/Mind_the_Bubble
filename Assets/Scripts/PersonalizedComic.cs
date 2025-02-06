@@ -39,15 +39,27 @@ public class PersonalizedComic : MonoBehaviour
             selectionNumber1 = Instantiate(selectionNumber_Prefab, selectedComic1.transform);
             selectionNumber1.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = comicSelectedNumber.ToString();
         }
-        else if (comicSelectedNumber == 2) 
+        else if (comicSelectedNumber == 2)
         {
             selectedComic2 = gameObjectClicked.transform.GetChild(0).gameObject;
 
             selectionNumber2 = Instantiate(selectionNumber_Prefab, selectedComic2.transform);
             selectionNumber2.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = comicSelectedNumber.ToString();
         }
-        else if (comicSelectedNumber >= 3)
+        else if (comicSelectedNumber == 3)
         {
+            selectedComic3 = gameObjectClicked.transform.GetChild(0).gameObject;
+
+            selectionNumber3 = Instantiate(selectionNumber_Prefab, selectedComic3.transform);
+            selectionNumber3.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = comicSelectedNumber.ToString();
+
+            validateComicButton.SetActive(true);
+        }
+        else if (comicSelectedNumber > 3) 
+        {
+            Destroy(selectionNumber3);
+            comicSelectedNumber = 3;
+
             selectedComic3 = gameObjectClicked.transform.GetChild(0).gameObject;
 
             selectionNumber3 = Instantiate(selectionNumber_Prefab, selectedComic3.transform);
