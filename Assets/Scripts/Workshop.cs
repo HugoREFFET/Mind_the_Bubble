@@ -27,7 +27,7 @@ public class Workshop : MonoBehaviour
         workergood = player.money >= addWorkerCost;
         if (workergood)
         {
-            workergood = workersCount < maxWorkers;
+            workergood = workersCount < maxWorkers + 1;
             if (workergood)
             {
                 player.LoseMoney(addWorkerCost);
