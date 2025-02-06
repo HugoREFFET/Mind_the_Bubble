@@ -6,6 +6,8 @@ public class PersonalizedComic : MonoBehaviour
 {
     public TextMeshProUGUI button_text;
 
+    public Comic comic;
+
     public GameObject zone1;
     public GameObject zone2;
     public GameObject zone3;
@@ -85,6 +87,10 @@ public class PersonalizedComic : MonoBehaviour
         zone_comic1 = Instantiate(selectedComic1, zone1.transform);
         zone_comic2 = Instantiate(selectedComic2, zone2.transform);
         zone_comic3 = Instantiate(selectedComic3, zone3.transform);
+
+        comic.bubbles[0] = zone_comic1.transform.GetChild(1).gameObject.GetComponent<Bubble>();
+        comic.bubbles[1] = zone_comic2.transform.GetChild(1).gameObject.GetComponent<Bubble>();
+        comic.bubbles[2] = zone_comic3.transform.GetChild(1).gameObject.GetComponent<Bubble>();
 
         zone_comic1.transform.GetChild(1).gameObject.SetActive(true);
         zone_comic2.transform.GetChild(1).gameObject.SetActive(true);
